@@ -1,0 +1,24 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+img{
+    height:100px;
+    width:400px;
+}
+th{
+    border:1px solid black;
+}
+
+/*table {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border-collapse:collapse;
+}
+
+td{
+    border:1px solid black;
+}*/
