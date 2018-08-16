@@ -10,20 +10,3 @@
 
 <button [ngClass]='getButtonstyle()'>My Style Button</button>
 <button [ngStyle]='getStyle()'>My Style Button</button>
-
-
-
-
-
-
-
-
-
-
-
-IN Html.Employee
-
-<input type="text" [value] ="name" (input)="name=$event.target.value" />
-    <br /><br />
-
-    {{name}}

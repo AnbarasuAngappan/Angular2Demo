@@ -58,9 +58,13 @@
     <p *ngIf="heroes.length > 1">There are many heroesasdasd!</p>
 
 
-    <input type="text" [value] ="name" (input)="name=$event.target.value" />
+    <input type="text" [value]="name" (input)="name=$event.target.value" />
+    {{name}}
     <br /><br />
 
+    <input [(ngModel)]='name' />
     {{name}}
+    <br /><br />
+
 
 </div>
