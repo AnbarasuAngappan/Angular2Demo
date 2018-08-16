@@ -14,14 +14,37 @@ var AppComponent = /** @class */ (function () {
         this.fullName = 'Tom';
         this.isDisable = false;
         this.lastName = 'Jerry';
+        this.applyColorClasses = 'boldClass italicClass';
+        this.applyBoldclass = true;
+        this.applyItalicclass = true;
+        this.inlineIsbold = true;
+        this.inlineIsItalic = true;
+        this.inlineIsColor = true;
+        this.inlineFontSize = 15;
     }
     AppComponent.prototype.getFullName = function () {
         return this.fullName + '' + this.lastName;
     };
+    AppComponent.prototype.getButtonstyle = function () {
+        var a = {
+            boldClass: this.applyBoldclass,
+            italicClass: this.applyItalicclass
+        };
+        return a;
+    };
+    AppComponent.prototype.getStyle = function () {
+        var style = {
+            "font-weight": this.inlineIsbold ? 'bold' : 'normal',
+            "font-style": this.inlineIsItalic ? 'italic' : 'normal',
+            "color": this.inlineIsColor ? 'green' : 'black',
+            "font-size.px": this.inlineFontSize
+        };
+        return style;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n               <div>\n                    <h1>{{pageheader + getFullName()}}</h1>    \n                    <img src=\"{{imagesource}}\" />\n                    <my-employee></my-employee>\n                    <input disabled = '{{isDisable}}' type=\"button\" value=\"Click Me\"  />\n                    <button disabled = '{{isDisable}}'>Click ME</button>\n                    <button [disabled] = 'isDisable'>Click ME</button>\n               </div>\n                    "
+            template: "\n               <div>\n                    <my-employee></my-employee>\n               </div>\n                    "
         })
     ], AppComponent);
     return AppComponent;

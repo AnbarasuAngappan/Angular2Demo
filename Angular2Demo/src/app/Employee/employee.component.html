@@ -1,43 +1,66 @@
-﻿<table>
-    <thead>
-        <tr>
-            <th attr.colspan="{{columnspan}}">
-                Employee Details
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                First Name
-            </td>
-            <td>
-                {{firstname}}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Last Name
-            </td>
-            <td>
-                {{lastname}}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Genger
-            </td>
-            <td>
-                {{gender}}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Age
-            </td>
-            <td>
-                {{age}}
-            </td>
-        </tr>
-    </tbody>
-</table>
+﻿<div>
+    <table>
+        <thead>
+            <tr>
+                <th attr.colspan="{{columnspan}}">
+                    Employee Details
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="boldClass">
+                    First Name
+                </td>
+                <td>
+                    {{firstname}}
+                </td>
+            </tr>
+            <tr>
+                <td class="boldClass">
+                    Last Name
+                </td>
+                <td>
+                    {{lastname}}
+                </td>
+            </tr>
+            <tr *ngIf="showDetails">
+                <td class="boldClass">
+                    Genger
+                </td>
+                <td>
+                    {{gender}}
+                </td>
+            </tr>
+            <tr *ngIf="showDetails">
+                <td class="boldClass">
+                    Age
+                </td>
+                <td>
+                    {{age}}
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+    <button (click)="toogleDetails()">
+        {{showDetails ? 'Hide' : 'Show'}}  Details
+
+    </button>
+
+    <h2>My favorite hero is: {{myHero}}</h2>
+    <p>Heroes:</p>
+    <ul>
+        <li *ngFor="let hero of heroes">
+            {{ hero }}
+        </li>
+    </ul>
+    <p *ngIf="heroes.length > 1">There are many heroesasdasd!</p>
+
+
+    <input type="text" [value] ="name" (input)="name=$event.target.value" />
+    <br /><br />
+
+    {{name}}
+
+</div>

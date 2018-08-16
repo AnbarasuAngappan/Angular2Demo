@@ -14,7 +14,18 @@ var EmployeeComponent = /** @class */ (function () {
         this.gender = 'Male';
         this.age = 10;
         this.columnspan = 2;
+        this.showDetails = true;
+        this.title = 'Tour of Heroes';
+        this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+        this.myHero = this.heroes[2];
+        this.name = 'Sai';
     }
+    //onClick(): void {
+    //    alert("Button Clicked");        
+    //}
+    EmployeeComponent.prototype.toogleDetails = function () {
+        this.showDetails = !this.showDetails;
+    };
     EmployeeComponent = __decorate([
         core_1.Component({
             selector: 'my-employee',

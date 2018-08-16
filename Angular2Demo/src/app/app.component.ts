@@ -4,12 +4,7 @@ import { Component } from "@angular/core";
     selector: 'my-app',
     template: `
                <div>
-                    <h1>{{pageheader + getFullName()}}</h1>    
-                    <img src="{{imagesource}}" />
                     <my-employee></my-employee>
-                    <input disabled = '{{isDisable}}' type="button" value="Click Me"  />
-                    <button disabled = '{{isDisable}}'>Click ME</button>
-                    <button [disabled] = 'isDisable'>Click ME</button>
                </div>
                     `    
 })
@@ -22,5 +17,35 @@ export class AppComponent  {
     getFullName(): string{
 
         return this.fullName + '' + this.lastName;
+    }
+
+    applyColorClasses: string = 'boldClass italicClass';
+
+    applyBoldclass: boolean = true;
+    applyItalicclass: boolean = true;
+
+    inlineIsbold: boolean = true;
+    inlineIsItalic: boolean = true;
+    inlineIsColor: boolean = true;
+    inlineFontSize: number = 15;
+
+    getButtonstyle() {
+        let a = {
+
+            boldClass: this.applyBoldclass,
+            italicClass: this.applyItalicclass
+        };
+
+        return a;
+    }
+
+    getStyle() {
+        let style = {
+            "font-weight": this.inlineIsbold ? 'bold' : 'normal',
+            "font-style": this.inlineIsItalic ? 'italic' : 'normal',
+            "color": this.inlineIsColor ? 'green' : 'black',
+            "font-size.px": this.inlineFontSize
+        }
+        return style;
     }
 }
