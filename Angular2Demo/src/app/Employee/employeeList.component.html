@@ -19,11 +19,11 @@
 
         <tbody>
             <tr *ngFor="let employee of employees">
-                <td>{{employee.empID}}</td>
-                <td>{{employee.name}}</td>
+                <td>{{employee.empID | uppercase}}</td>
+                <td>{{employee.name | employeeTittle:employee.gender}}</td>
                 <td>{{employee.gender}}</td>
                 <td>{{employee.annualsalary}}</td>
-                <td>{{employee.dateofbirth}}</td>
+                <td>{{employee.dateofbirth | date:'fullDate'}}</td>
                 <td>{{employee.location}}</td>
             </tr>
             <tr *ngIf="!employees || employees.length == 0">
