@@ -13,13 +13,14 @@ var app_component_1 = require("./app.component");
 var employee_component_1 = require("./Employee/employee.component");
 var employeeList_component_1 = require("./Employee/employeeList.component");
 var employee_Tittle_Pipe_1 = require("./Employee/employee.Tittle.Pipe");
+var employeeCount_component_1 = require("./Employee/employeeCount.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employeeList_component_1.EmployeelistComponent, employee_Tittle_Pipe_1.EmployeeTillePipe],
+            declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employeeList_component_1.EmployeelistComponent, employee_Tittle_Pipe_1.EmployeeTillePipe, employeeCount_component_1.EmployeeCountComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
