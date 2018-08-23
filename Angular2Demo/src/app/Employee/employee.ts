@@ -1,8 +1,8 @@
 ﻿export interface IEmployee {
     empID: string,
-    name: string,
+    names: string,
     gender: string,
     annualsalary: string,
     dateofbirth: string,
-    location: string,
+    locations: string,
 }

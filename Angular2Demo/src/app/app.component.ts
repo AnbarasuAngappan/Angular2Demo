@@ -4,48 +4,52 @@ import { Component } from "@angular/core";
     selector: 'my-app',
     template: `
                <div>
+                   You Entered Text:<input type="text" [(ngModel)] ='userTest'/>
+                     <br /> <br />
+                   <sample [getInputText]='userTest'></sample>
                     <my-employeeList></my-employeeList>
                </div>
                     `    
 })
 export class AppComponent  {   
-    pageheader: string = 'Welcome !..';
-    imagesource: string = 'http://intellibot.io/img/IB/logo.png';
-    fullName: string = 'Tom';
-    isDisable: boolean = false;
-    lastName: string = 'Jerry';
-    getFullName(): string{
+    userTest: string = "SAI";
+    //pageheader: string = 'Welcome !..';
+    //imagesource: string = 'http://intellibot.io/img/IB/logo.png';
+    //fullName: string = 'Tom';
+    //isDisable: boolean = false;
+    //lastName: string = 'Jerry';
+    //getFullName(): string{
 
-        return this.fullName + '' + this.lastName;
-    }
+    //    return this.fullName + '' + this.lastName;
+    //}
 
-    applyColorClasses: string = 'boldClass italicClass';
+    //applyColorClasses: string = 'boldClass italicClass';
 
-    applyBoldclass: boolean = true;
-    applyItalicclass: boolean = true;
+    //applyBoldclass: boolean = true;
+    //applyItalicclass: boolean = true;
 
-    inlineIsbold: boolean = true;
-    inlineIsItalic: boolean = true;
-    inlineIsColor: boolean = true;
-    inlineFontSize: number = 15;
+    //inlineIsbold: boolean = true;
+    //inlineIsItalic: boolean = true;
+    //inlineIsColor: boolean = true;
+    //inlineFontSize: number = 15;
 
-    getButtonstyle() {
-        let a = {
+    //getButtonstyle() {
+    //    let a = {
 
-            boldClass: this.applyBoldclass,
-            italicClass: this.applyItalicclass
-        };
+    //        boldClass: this.applyBoldclass,
+    //        italicClass: this.applyItalicclass
+    //    };
 
-        return a;
-    }
+    //    return a;
+    //}
 
-    getStyle() {
-        let style = {
-            "font-weight": this.inlineIsbold ? 'bold' : 'normal',
-            "font-style": this.inlineIsItalic ? 'italic' : 'normal',
-            "color": this.inlineIsColor ? 'green' : 'black',
-            "font-size.px": this.inlineFontSize
-        }
-        return style;
-    }
+    //getStyle() {
+    //    let style = {
+    //        "font-weight": this.inlineIsbold ? 'bold' : 'normal',
+    //        "font-style": this.inlineIsItalic ? 'italic' : 'normal',
+    //        "color": this.inlineIsColor ? 'green' : 'black',
+    //        "font-size.px": this.inlineFontSize
+    //    }
+    //    return style;
+    //}
 }

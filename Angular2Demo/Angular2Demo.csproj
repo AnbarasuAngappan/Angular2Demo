@@ -107,10 +107,12 @@
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\Employee\employee.component.ts" />
+    <TypeScriptCompile Include="src\app\Employee\employee.service.ts" />
     <TypeScriptCompile Include="src\app\Employee\employee.Tittle.Pipe.ts" />
     <TypeScriptCompile Include="src\app\Employee\employee.ts" />
     <TypeScriptCompile Include="src\app\Employee\employeeCount.component.ts" />
     <TypeScriptCompile Include="src\app\Employee\employeeList.component.ts" />
+    <TypeScriptCompile Include="src\app\Employee\Others\Simple.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>

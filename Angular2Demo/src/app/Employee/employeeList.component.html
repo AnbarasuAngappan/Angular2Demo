@@ -27,16 +27,16 @@
         <tbody>
             <tr *ngFor="let employee of employees">
                 <td>{{employee.empID | uppercase}}</td>
-                <td>{{employee.name | employeeTittle:employee.gender}}</td>
+                <td>{{employee.names | employeeTittle:employee.gender}}</td>
                 <td>{{employee.gender}}</td>
                 <td>{{employee.annualsalary}}</td>
                 <td>{{employee.dateofbirth | date:'fullDate'}}</td>
-                <td>{{employee.location}}</td>
+                <td>{{employee.locations}}</td>
             </tr>
             <tr *ngIf="!employees || employees.length == 0">
                 <td colspan="3">No Data Found !--</td>
             </tr>
         </tbody>
-    </table>
+    </table>    
 </body>
 </html>

@@ -9,42 +9,43 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.pageheader = 'Welcome !..';
-        this.imagesource = 'http://intellibot.io/img/IB/logo.png';
-        this.fullName = 'Tom';
-        this.isDisable = false;
-        this.lastName = 'Jerry';
-        this.applyColorClasses = 'boldClass italicClass';
-        this.applyBoldclass = true;
-        this.applyItalicclass = true;
-        this.inlineIsbold = true;
-        this.inlineIsItalic = true;
-        this.inlineIsColor = true;
-        this.inlineFontSize = 15;
+        this.userTest = "SAI";
+        //pageheader: string = 'Welcome !..';
+        //imagesource: string = 'http://intellibot.io/img/IB/logo.png';
+        //fullName: string = 'Tom';
+        //isDisable: boolean = false;
+        //lastName: string = 'Jerry';
+        //getFullName(): string{
+        //    return this.fullName + '' + this.lastName;
+        //}
+        //applyColorClasses: string = 'boldClass italicClass';
+        //applyBoldclass: boolean = true;
+        //applyItalicclass: boolean = true;
+        //inlineIsbold: boolean = true;
+        //inlineIsItalic: boolean = true;
+        //inlineIsColor: boolean = true;
+        //inlineFontSize: number = 15;
+        //getButtonstyle() {
+        //    let a = {
+        //        boldClass: this.applyBoldclass,
+        //        italicClass: this.applyItalicclass
+        //    };
+        //    return a;
+        //}
+        //getStyle() {
+        //    let style = {
+        //        "font-weight": this.inlineIsbold ? 'bold' : 'normal',
+        //        "font-style": this.inlineIsItalic ? 'italic' : 'normal',
+        //        "color": this.inlineIsColor ? 'green' : 'black',
+        //        "font-size.px": this.inlineFontSize
+        //    }
+        //    return style;
+        //}
     }
-    AppComponent.prototype.getFullName = function () {
-        return this.fullName + '' + this.lastName;
-    };
-    AppComponent.prototype.getButtonstyle = function () {
-        var a = {
-            boldClass: this.applyBoldclass,
-            italicClass: this.applyItalicclass
-        };
-        return a;
-    };
-    AppComponent.prototype.getStyle = function () {
-        var style = {
-            "font-weight": this.inlineIsbold ? 'bold' : 'normal',
-            "font-style": this.inlineIsItalic ? 'italic' : 'normal',
-            "color": this.inlineIsColor ? 'green' : 'black',
-            "font-size.px": this.inlineFontSize
-        };
-        return style;
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n               <div>\n                    <my-employeeList></my-employeeList>\n               </div>\n                    "
+            template: "\n               <div>\n                   You Entered Text:<input type=\"text\" [(ngModel)] ='userTest'/>\n                     <br /> <br />\n                   <sample [getInputText]='userTest'></sample>\n                    <my-employeeList></my-employeeList>\n               </div>\n                    "
         })
     ], AppComponent);
     return AppComponent;
