@@ -1,4 +1,4 @@
-﻿import { Component } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import { IEmployee } from "./employee";
 import { EmployeeService } from "./employee.service";
 
@@ -10,9 +10,16 @@ import { EmployeeService } from "./employee.service";
     
 })
 
-export class EmployeelistComponent {
+export class EmployeelistComponent implements OnInit {
     employees: IEmployee[];
+    errorMessage: string = "Please Wait for the Response..";
     constructor(private _employeeService : EmployeeService) {
-        this.employees = _employeeService.getEmployee();
+        
+    }
+
+    ngOnInit() {
+        this._employeeService.getEmployee()
+            .subscribe((empdata) => this.employees = empdata,
+            (error) => this.errorMessage = 'Problem With Service...');
     }
 }

@@ -33,7 +33,10 @@
                 <td>{{employee.dateofbirth | date:'fullDate'}}</td>
                 <td>{{employee.locations}}</td>
             </tr>
-            <tr *ngIf="!employees || employees.length == 0">
+            <tr *ngIf="!employees">
+                <td colspan="7">{{errorMessage}}</td>  <!--<td colspan="3">No Data Found !--</td>-->
+            </tr>
+            <tr *ngIf="employees && employees.length == 0">
                 <td colspan="3">No Data Found !--</td>
             </tr>
         </tbody>

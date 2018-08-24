@@ -1,16 +1,27 @@
 ﻿import { IEmployee } from "./employee";
 import { Injectable } from "@angular/core";
+import { Http,Response } from "@angular/http";
+import { Observable } from "rxjs/Observable";
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/catch'
+import 'rxjs/add/observable/throw'
 
 @Injectable()
 export class EmployeeService {
-    getEmployee() : IEmployee[]{
-        return [
-            { empID: 'ibot01', names: 'Anbu', gender: 'Male', annualsalary: '300000', dateofbirth: '05/27/1993', locations: 'Chennai' },
-            { empID: 'IBOT02', names: 'Balaji', gender: 'Male', annualsalary: '450000', dateofbirth: '02/27/1995', locations: 'Coimbatore' },
-            { empID: 'iBOT03', names: 'Gowtham', gender: 'Male', annualsalary: '550000', dateofbirth: '08/27/1992', locations: 'Coimbatore' },
-            { empID: 'IBOT04', names: 'Ramesh', gender: 'Male', annualsalary: '480000', dateofbirth: '09/7/1945', locations: 'Coimbatore' },
-            { empID: 'iBOT05', names: 'Angappan', gender: 'Male', annualsalary: '550000', dateofbirth: '06/24/1942', locations: 'Coimbatore' },
-            { empID: 'iBOT06', names: 'Indhu', gender: 'Female', annualsalary: '450000', dateofbirth: '08/24/1993', locations: 'Erode' },
-        ];
+
+    constructor(private _http: Http) {}
+
+    getEmployee(): Observable<any> {
+        return this._http.get("http://localhost:63409/api/Employee")
+            .map((response: Response) => {
+                console.log(response)
+                return response.json()
+            })
+            .catch(this.handleError);
+    }
+
+    handleError(error : Response) {
+        console.log(error);
+        return Observable.throw(error);
     }
 }

@@ -14,8 +14,13 @@ var employee_service_1 = require("./employee.service");
 var EmployeelistComponent = /** @class */ (function () {
     function EmployeelistComponent(_employeeService) {
         this._employeeService = _employeeService;
-        this.employees = _employeeService.getEmployee();
+        this.errorMessage = "Please Wait for the Response..";
     }
+    EmployeelistComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._employeeService.getEmployee()
+            .subscribe(function (empdata) { return _this.employees = empdata; }, function (error) { return _this.errorMessage = 'Problem With Service...'; });
+    };
     EmployeelistComponent = __decorate([
         core_1.Component({
             selector: 'my-employeeList',
