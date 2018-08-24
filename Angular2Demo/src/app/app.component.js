@@ -10,6 +10,12 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.userTest = "SAI";
+        //<div>
+        //               You Entered Text:<input type="text" [(ngModel)] ='userTest'/>
+        //                 <br /> <br />
+        //               <sample [getInputText]='userTest'></sample>
+        //                <my-employeeList></my-employeeList>
+        //           </div>
         //pageheader: string = 'Welcome !..';
         //imagesource: string = 'http://intellibot.io/img/IB/logo.png';
         //fullName: string = 'Tom';
@@ -45,7 +51,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n               <div>\n                   You Entered Text:<input type=\"text\" [(ngModel)] ='userTest'/>\n                     <br /> <br />\n                   <sample [getInputText]='userTest'></sample>\n                    <my-employeeList></my-employeeList>\n               </div>\n                    "
+            template: "\n                <div style=\"padding:5px\">\n                      You Entered Text:<input type=\"text\" [(ngModel)] ='userTest'/>\n                <br /> <br />\n              <sample [getInputText]='userTest'></sample>\n                <my-employeeList></my-employeeList>\n                </div>\n              "
         })
     ], AppComponent);
     return AppComponent;

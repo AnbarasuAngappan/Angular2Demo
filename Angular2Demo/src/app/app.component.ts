@@ -1,18 +1,27 @@
-import { Component } from "@angular/core";
+import { Component } from "@angular/core"
 
 @Component({
     selector: 'my-app',
     template: `
-               <div>
-                   You Entered Text:<input type="text" [(ngModel)] ='userTest'/>
-                     <br /> <br />
-                   <sample [getInputText]='userTest'></sample>
-                    <my-employeeList></my-employeeList>
-               </div>
-                    `    
+                <div style="padding:5px">
+                      You Entered Text:<input type="text" [(ngModel)] ='userTest'/>
+                <br /> <br />
+              <sample [getInputText]='userTest'></sample>
+                <my-employeeList></my-employeeList>
+                </div>
+              `    
 })
 export class AppComponent  {   
-    userTest: string = "SAI";
+    userTest: string = "SAI"; 
+    
+//<div>
+//               You Entered Text:<input type="text" [(ngModel)] ='userTest'/>
+//                 <br /> <br />
+//               <sample [getInputText]='userTest'></sample>
+//                <my-employeeList></my-employeeList>
+
+
+//           </div>
     //pageheader: string = 'Welcome !..';
     //imagesource: string = 'http://intellibot.io/img/IB/logo.png';
     //fullName: string = 'Tom';

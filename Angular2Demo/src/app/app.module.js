@@ -10,20 +10,30 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var employee_component_1 = require("./Employee/employee.component");
 var employeeList_component_1 = require("./Employee/employeeList.component");
 var employee_Tittle_Pipe_1 = require("./Employee/employee.Tittle.Pipe");
 var employeeCount_component_1 = require("./Employee/employeeCount.component");
 var Simple_component_1 = require("./Employee/Others/Simple.component");
+var home_component_1 = require("./Home/home.component");
+var pagenotfound_component_1 = require("./Employee/Others/pagenotfound.component");
+var appRoutes = [
+    { path: 'Home', component: home_component_1.HomeComponent },
+    { path: 'Employee', component: employeeList_component_1.EmployeelistComponent },
+    { path: '', redirectTo: './Home', pathMatch: 'full' },
+    { path: '**', component: pagenotfound_component_1.pageNotFoundComponent }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, router_1.RouterModule.forRoot(appRoutes)],
             declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employeeList_component_1.EmployeelistComponent,
-                employee_Tittle_Pipe_1.EmployeeTillePipe, employeeCount_component_1.EmployeeCountComponent, Simple_component_1.SimpleComponent],
+                employee_Tittle_Pipe_1.EmployeeTillePipe, employeeCount_component_1.EmployeeCountComponent, Simple_component_1.SimpleComponent,
+                home_component_1.HomeComponent, pagenotfound_component_1.pageNotFoundComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
